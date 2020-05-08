@@ -8,10 +8,7 @@ socket.on('connect', () => {
 
 
 function sendMessage(text) {
-  socket.emit('message', text, (data) => {
-    console.log('ack')
-    console.log('ack: ', data)
-  });
+  socket.emit('message', text);
 }
 
 function subscribeToMessages(messageHandler) {
